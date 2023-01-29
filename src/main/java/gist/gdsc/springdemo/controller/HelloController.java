@@ -7,16 +7,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-public class DemoController {
+public class HelloController {
 
     DemoInterface DemoInterface;
 
-    public DemoController(DemoInterface DemoInterface) {
+    public HelloController(DemoInterface DemoInterface) {
         this.DemoInterface = DemoInterface;
     }
 
     @GetMapping("/hello")
-    public String hello() {
+    public String welcome() {
         return this.DemoInterface.hello();
     }
 
